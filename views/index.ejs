@@ -5,6 +5,31 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="javascripts/webapp.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script>
+        var apikey = "up3wv3uvufs74w5yqh2tdpza";
+        var baseUrl = "http://api.rottentomatoes.com/api/public/v1.0";
+        // construct the uri with our apikey
+        var moviesSearchUrl = baseUrl + '/movies.json?apikey=' + apikey;
+        var query = "Gamer";
+        $(document).ready(function() {
+            // send off the query
+            $.ajax({
+                url: moviesSearchUrl + '&q=' + encodeURI(query),
+                dataType: "jsonp",
+                success: searchCallback
+            });
+        });
+        // callback for when we get back the results
+        function searchCallback(data) {
+            var movies = data.movies;
+            //console.log($(movies).first()[0].title);
+            $("div.movie-title").text($(movies).first()[0].title);
+            $("div.poster-img").html('<img style="background-image:url(\'' + $(movies).first()[0].posters.detailed + '\')" />');
+            console.log($(movies).first()[0].posters.detailed);
+        }
+    </script>
+
 </head>
 <body ng-controller="webController as ctrl">
     <div class="page-container">
@@ -12,7 +37,7 @@
         <div ng-init='poster=true' class="movie-container">
             <div ng-show="true" class="poster">
                 <div class="title-container">
-                    <div class="movie-title">Gamer</div>
+                    <div class="movie-title"></div>
                     <div class="movie-rating">
                         <img src="images/tomato.png"/>
                         <div>34%</div>
