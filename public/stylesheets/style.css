@@ -166,7 +166,8 @@ body {
 .poster-img {
     height: 92%;
     max-height: 92%;
-    background-image: url("../images/poster.png");
+    background-size: 100%;
+    /*background-image: url("../images/poster.png");*/
     background-size: contain;
     background-position: 50%;
     background-repeat: no-repeat;
@@ -177,7 +178,7 @@ body {
 .trailer {
     width: 95%;
     max-height: 1200px;
-    height: 65%;
+    height: 75%;
     margin: 0 auto;
     position: relative;
     top: 50%;
@@ -214,4 +215,19 @@ body {
 .poster-container {
     color: white;
     /*width: 50%;*/
+}
+
+#player {
+    visibility:hidden;
+
+    width: 95%;
+    max-height: 1200px;
+    height: 75%;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    position: absolute;
+
 }
