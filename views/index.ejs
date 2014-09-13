@@ -10,6 +10,43 @@
 </head>
 <body ng-controller="webController as ctrl">
     <div class="page-container">
+
+        <div ng-init="toggleNav = false" class="nav-container" ng-animate="navAnimat">
+            <div ng-click="toggleNav = !toggleNav" class="hamburger-container">
+                <img src="images/hamburgerButton.png"/>
+                <div ng-hide="!toggleNav" class="company">
+                    Scene
+                </div>
+            </div>
+            <div ng-hide="!toggleNav" class="full-menu-container">
+                <div class="categories">
+                    <ul>
+                        <li>Favorites</li>
+                        <li>Genres
+                            <ul class="genre-list">
+                                <li>Action</li>
+                                <li>Adventure</li>
+                                <li>Classic</li>
+                                <li>Comedy</li>
+                                <li>Documentary</li>
+                                <li>Drama</li>
+                                <li>Horror</li>
+                                <li>Thriller</li>
+                                <li>Romance</li>
+                            </ul>
+                        </li>
+                        <li>Best of
+                            <ul>
+                                <li>All Time</li>
+                                <li>2013</li>
+                                <li>2012</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <div ng-init='poster=true'class="movie-container">
             <div ng-click="poster = false" ng-show="poster" class="poster animate-show">
                 <div class="poster-container">

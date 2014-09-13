@@ -11,6 +11,78 @@ body {
 
 }
 
+.nav-container {
+    background-color: #202020;
+    position: absolute;
+    left: 5%;
+    /*width: 50px;*/
+    /*height: 50px;*/
+}
+
+.nav-container .full-menu-container {
+    color: #a7a7a7;
+    font-size: 16px;
+    font-weight: lighter;
+    padding-bottom: 2px;
+    width: 150px;
+    height: 100%;
+    max-height: 410px;
+    overflow: scroll;
+}
+
+
+.nav-container .hamburger-container {
+    height: 30px;
+    padding: 5px 6px;
+}
+
+.nav-container .hamburger-container img {
+    height: 100%;
+}
+
+.nav-container .company {
+    color: white;
+    font-size: 22px;
+    font-weight: lighter;
+    display: inline;
+    position: relative;
+    top: -7px;
+    left: 10px;
+}
+
+
+.nav-container .company img {
+    height: 32px;
+    position: relative;
+    top: 7px;
+    margin-left: 10px;
+    margin-right: 2px;
+}
+
+
+.nav-container ul {
+    list-style-type: none;
+    -webkit-padding-start: 25px;
+    padding-start: 25px;
+}
+
+.nav-container ul li {
+    margin-bottom: 10px;
+}
+
+.nav-container ul li:first-child {
+    margin-top: 5px;
+}
+
+.genre-list li:nth-child(6) {
+    color: white;
+}
+
+
+.nav-container ul ul li {
+    margin-bottom: 5px;
+}
+
 .page-container {
     height: 100%;
 }
