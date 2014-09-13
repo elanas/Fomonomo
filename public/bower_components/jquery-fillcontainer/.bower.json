@@ -1,0 +1,25 @@
+{
+  "name": "jquery-fillcontainer",
+  "authors": [
+    "Thomas Charbit"
+  ],
+  "description": "Make a child element fill its container",
+  "license": "MIT",
+  "homepage": "https://github.com/FreshFlesh/jquery-fillcontainer",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "13c00becf7",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "13c00becf79ecd657f6c1e5040996040082abf5d"
+  },
+  "_source": "git://github.com/FreshFlesh/jquery-fillcontainer.git",
+  "_target": "*",
+  "_originalSource": "jquery-fillcontainer"
+}

@@ -3,6 +3,7 @@
 <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="javascripts/webapp.js"></script>
 </head>
@@ -11,19 +12,32 @@
 
         <div ng-init='poster=true' class="movie-container">
             <div ng-show="true" class="poster">
-                <div class="title-container">
-                    <div class="movie-title">Gamer</div>
-                    <div class="movie-rating">
-                        <img src="images/tomato.png"/>
-                        <div>34%</div>
-                    </div>
+                <!--<div class="title-container">-->
+                    <!--<div class="movie-title">Gamer</div>-->
+                    <!--<div class="movie-rating">-->
+                        <!--<img src="images/tomato.png"/>-->
+                        <!--<div>34%</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <div class="testme">
+                    <div class="movie-title title-container">Gamer</div>
+                    <div class="movie-rating2">%34</div>
+                    <img class="movie-rating-tomato" src="images/tomato.png"/>
+                    <img class="poster-image" src="images/poster.png"/>
                 </div>
-                <div class="poster-img"></div>
+                <!--<div class="poster-img"></div>-->
             </div>
             <div ng-show="false" class="trailer">
 
             </div>
         </div>
     </div>
+<script type="text/javascript" src="bower_components/jquery-fillcontainer/jquery.fillcontainer.js"></script>
+<script type="text/javascript">
+    $('.testme').fillContainer({
+        fillMode: 'fit'
+    });
+
+</script>
 </body>
 </html>
