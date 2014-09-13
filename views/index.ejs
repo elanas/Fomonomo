@@ -19,7 +19,7 @@
                         <!--<div>34%</div>-->
                     <!--</div>-->
                 <!--</div>-->
-                <div class="testme">
+                <div class="poster-container">
                     <div class="movie-title title-container">Gamer</div>
                     <div class="movie-rating2">%34</div>
                     <img class="movie-rating-tomato" src="images/tomato.png"/>
@@ -35,15 +35,15 @@
 <script type="text/javascript" src="bower_components/imagesloaded/imagesloaded.pkgd.js"></script>
 <script type="text/javascript" src="bower_components/jquery-fillcontainer/jquery.fillcontainer.js"></script>
 <script type="text/javascript">
-//    $(function() {
-        imagesLoaded('.testme', function() {
-            $('.testme').fillContainer({
+    $(function() {
+        imagesLoaded('.poster-container', function() {
+            $('.poster-container').fillContainer({
                 fillMode: 'fit',
                 parent: '.movie-container'
             });
             console.log( "ready!" );
         });
-//    });
+    });
 
 </script>
 </body>
