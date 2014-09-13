@@ -4,7 +4,7 @@
 
 (function () {
 
-    var app = angular.module("webapp", []);
+    var app = angular.module("webapp", ['ngAnimate']);
 
     app.controller('webController', ['$window', '$scope', '$http', '$timeout', function ($window, $scope, $http, $timeout) {
 
