@@ -9,14 +9,40 @@
     <script src="http://www.youtube.com/iframe_api"></script>
     <script src="http://www.youtube.com/player_api"></script>
     <script type="text/javascript" src="javascripts/webapp.js"></script>
+    <script>
+        var apikey = "up3wv3uvufs74w5yqh2tdpza";
+        var baseUrl = "http://api.rottentomatoes.com/api/public/v1.0";
+        // construct the uri with our apikey
+        var moviesSearchUrl = baseUrl + '/movies.json?apikey=' + apikey;
+        var query = "Boyhood";
+        $(document).ready(function() {
+            // send off the query
+            $.ajax({
+                url: moviesSearchUrl + '&q=' + encodeURI(query),
+                dataType: "jsonp",
+                success: searchCallback
+            });
+        });
+        // callback for when we get back the results
+        function searchCallback(data) {
+            var movies = data.movies;
+            var movie = $(movies).first()[0];
+            //console.log($(movies).first()[0].title);
+            $("div.movie-title").text(movie.title);
+            $("img.poster-image").attr("src", movie.posters.detailed.toString().substring(0, movie.posters.detailed.toString().length - 7) + "ori.jpg");
+            $("div.movie-rating2").text("%" + movie.ratings.critics_score);
+            console.log(movie.posters.original);
+        }
+    </script>
+
 </head>
 <body ng-controller="webController as ctrl">
     <div class="page-container" ng-click="hideIframe()">
         <div class="movie-container">
             <div ng-click="showPoster = false; showIframe()" ng-show="showPoster" class="poster animate-show">
                 <div class="poster-container">
-                    <div class="movie-title title-container">Boyhood</div>
-                    <div class="movie-rating2">%99</div>
+                    <div class="movie-title title-container"></div>
+                    <div class="movie-rating2"></div>
                     <img class="movie-rating-tomato" src="images/tomato.png"/>
                     <img class="poster-image" src="images/poster1.png"/>
                 </div>
@@ -42,9 +68,9 @@
 
 
 
-            </div>
         </div>
     </div>
+</div>
 <script type="text/javascript" src="bower_components/imagesloaded/imagesloaded.pkgd.js"></script>
 <script type="text/javascript" src="bower_components/jquery-fillcontainer/jquery.fillcontainer.js"></script>
 <script type="text/javascript">
