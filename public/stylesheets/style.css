@@ -17,7 +17,7 @@ body {
 
 .poster {
     max-width: 310px;
-    min-width: 280px;
+    min-width: 200px;
     border: 1px green solid;
     margin: 0 auto;
     width: 50%;
@@ -36,7 +36,7 @@ body {
     height: 90%;
     max-height: 90%;
     background-image: url("../images/poster.png");
-    background-size: 80%;
+    background-size: 100%;
     background-repeat: no-repeat;
     margin: 0 auto;
 
