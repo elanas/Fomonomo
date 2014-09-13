@@ -4,13 +4,14 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
     <script type="text/javascript" src="javascripts/webapp.js"></script>
 </head>
 <body ng-controller="webController as ctrl">
     <div class="page-container">
 
-        <div ng-init='poster=true' class="movie-container">
-            <div ng-show="true" class="poster">
+        <div ng-init='poster=true'class="movie-container">
+            <div ng-click="poster = false" ng-show="poster" class="poster animate-show">
                 <div class="title-container">
                     <div class="movie-title">Gamer</div>
                     <div class="movie-rating">
@@ -20,7 +21,19 @@
                 </div>
                 <div class="poster-img"></div>
             </div>
-            <div ng-show="false" class="trailer">
+            <div ng-click="poster = true" ng-show="!poster" class="trailer animate-show">
+
+                <!--<embed width="99%" height="99%"-->
+                       <!--src="http://www.youtube.com/v/Y0oX0xiwOv8">-->
+                <!--<iframe width="99%" height="100%"-->
+                        <!--src=" http://www.youtube.com/embed/Y0oX0xiwOv8?autohide=0&controls=0">-->
+                    <!--http://www.youtube.com/embed/VIDEO_ID-->
+                <!--</iframe>-->
+
+                <iframe width="99%" height="99%" src="http://www.youtube.com/embed/Y0oX0xiwOv8?
+                        rel=0&vq=hd1080&autohide=1&autoplay=1&border=1&color1=#096100&controls=0&hd=1&modestbranding=1"
+                        frameborder="0" allowfullscreen>
+                </iframe>
 
             </div>
         </div>
