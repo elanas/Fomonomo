@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Fill Container Demo</title>
+	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<style>
+	.container {
+		background: #e7ecea;
+		width: 70%;
+		height: 300px;
+		opacity: 0.5;
+		overflow: hidden;
+		margin: 0;
+	}
+
+	.item {
+		background: #2CC185;
+		width: 50px;
+		height: 30px;
+		opacity: 0.5;
+	}
+	</style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../jquery.fillcontainer.js"></script>
+
+</head>
+<body>
+
+<h1>Demo Page</h1>
+
+<p>Resize this page to see different behaviors.</p>
+<h3>Basic usage</h3>
+
+<div class="container">
+	<img id="item1" data-aspect-ratio="1" src="http://www.freshflesh.fr/fresh.png" />
+</div>
+
+<code>
+	$('#item1').fillContainer();
+</code>
+<script type="text/javascript">
+	$('#item1').fillContainer();
+</script>
+
+<h3>Fit mode</h3>
+
+<div class="container">
+	<img id="item2" data-aspect-ratio="1" src="http://www.freshflesh.fr/fresh.png" />
+</div>
+
+<code>
+	$('#item2').fillContainer({fillMode : 'fit'});
+</code>
+<script type="text/javascript">
+	$('#item2').fillContainer({fillMode : 'fit'});
+</script>
+
+<h3>With offset</h3>
+
+<div class="container">
+	<img id="item3" data-aspect-ratio="1" src="http://www.freshflesh.fr/fresh.png" />
+</div>
+
+<code>
+	$('#item3').fillContainer({fillMode : 'fit', offset : [-100,100]});
+</code>
+<script type="text/javascript">
+	$('#item3').fillContainer({fillMode : 'fit', offset : [-100,100]});
+</script>
+
+
+
+</body>
+</html>
