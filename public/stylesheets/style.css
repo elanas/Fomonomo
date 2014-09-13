@@ -143,3 +143,18 @@ body {
     color: white;
     /*width: 50%;*/
 }
+
+#player {
+    visibility:hidden;
+
+    width: 95%;
+    max-height: 1200px;
+    height: 75%;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    position: absolute;
+
+}

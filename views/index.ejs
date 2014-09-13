@@ -7,12 +7,13 @@
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="http://www.youtube.com/iframe_api"></script>
+    <script src="http://www.youtube.com/player_api"></script>
     <script type="text/javascript" src="javascripts/webapp.js"></script>
 </head>
 <body ng-controller="webController as ctrl">
-    <div class="page-container">
-        <div ng-init='poster=true'class="movie-container">
-            <div ng-click="poster = false" ng-show="poster" class="poster animate-show">
+    <div class="page-container" ng-click="hideIframe()">
+        <div class="movie-container">
+            <div ng-click="showPoster = false; showIframe()" ng-show="showPoster" class="poster animate-show">
                 <div class="poster-container">
                     <div class="movie-title title-container">Boyhood</div>
                     <div class="movie-rating2">%99</div>
@@ -21,8 +22,8 @@
                 </div>
                 <!--<div class="poster-img"></div>-->
             </div>
-            <div ng-click="poster = true" ng-show="!poster" class="trailer animate-show">
-
+            <div id="player" class="trailer animate-show">
+                <!--<div id="player"></div>-->
                 <!--<embed width="99%" height="99%"-->
                        <!--src="http://www.youtube.com/v/Y0oX0xiwOv8">-->
                 <!--<iframe width="99%" height="100%"-->
@@ -35,9 +36,9 @@
                         <!--frameborder="0" allowfullscreen>-->
                 <!--</iframe>-->
 
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LFphYRyH7wc?rel=0&autohide=1&autoplay=1&vq=hd1080"
-                        frameborder="0" allowfullscreen>
-                </iframe>
+                <!--<iframe id="vidId" width="100%" height="100%" src="https://www.youtube.com/embed/LFphYRyH7wc?rel=0&autohide=1&autoplay=1&vq=hd1080"-->
+                        <!--frameborder="0" allowfullscreen>-->
+                <!--</iframe>-->
 
 
 
