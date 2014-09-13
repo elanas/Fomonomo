@@ -103,10 +103,9 @@ body {
 }
 
 .trailer {
-    border: 1px red solid;
     width: 95%;
     max-height: 1200px;
-    height: 90%;
+    height: 65%;
     margin: 0 auto;
     position: relative;
     top: 50%;
