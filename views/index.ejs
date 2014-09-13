@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html ng-app="webapp">
+<head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="javascripts/webapp.js"></script>
+</head>
+<body ng-controller="webController as ctrl">
+    <div class="page-container">
+
+        <div ng-init='poster=true' class="movie-container">
+            <div ng-show="true" class="poster">
+
+            </div>
+            <div ng-show="false" class="trailer">
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
 </html>
