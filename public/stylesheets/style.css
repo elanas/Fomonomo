@@ -16,7 +16,7 @@ body {
 }
 
 .poster {
-    max-width: 310px;
+    max-width: 325px;
     min-width: 200px;
     border: 1px green solid;
     margin: 0 auto;
@@ -24,12 +24,22 @@ body {
     height: 100%;
 }
 
-.poster .movie-title {
+.poster .title-container {
     color: white;
-    height: 10%;
     font-size: 22px;
-    text-align: center;
     font-weight: lighter;
+    display: inline-block;
+    width: 100%;
+}
+
+.poster .title-container .movie-title {
+    text-align: left;
+    display: inline-block;
+}
+
+.poster .title-container .movie-rating {
+    display: inline-block;
+    float:right;
 }
 
 .poster-img {
