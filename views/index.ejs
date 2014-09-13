@@ -28,7 +28,7 @@
             var movie = $(movies).first()[0];
             //console.log($(movies).first()[0].title);
             $("div.movie-title").text(movie.title);
-            $("img.poster-image").attr("src", movie.posters.detailed);
+            $("img.poster-image").attr("src", movie.posters.detailed.toString().substring(0, movie.posters.detailed.toString().length - 7) + "ori.jpg");
             $("div.movie-rating2").text("%" + movie.ratings.critics_score);
             console.log(movie.posters.original);
         }
