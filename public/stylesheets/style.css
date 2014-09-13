@@ -19,14 +19,15 @@ body {
     border: 1px white solid;
     width: 100%;
     height: 90%;
-    max-width: 650px;
     margin: 0 auto;
-    max-height: 500px;
+
+    /*max-width: 650px;*/
+    /*max-height: 500px;*/
 }
 
 .poster {
-    max-width: 325px;
-    min-width: 200px;
+    /*max-width: 325px;*/
+    /*min-width: 200px;*/
     border: 1px green solid;
     margin: 0 auto;
     /*width: 50%;*/
@@ -37,7 +38,7 @@ body {
     color: white;
     font-size: 22px;
     font-weight: lighter;
-    display: inline-block;
+    display: inline;
     width: 100%;
     height: 6%;
     box-sizing: border-box;
@@ -56,6 +57,23 @@ body {
 
 }
 
+.movie-rating2 {
+    display: inline;
+    float: right;
+    height: 6%;
+    color: white;
+    font-size: 22px;
+    font-weight: lighter;
+}
+
+.movie-rating-tomato {
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    top: 1px;
+    float: right;
+}
+
 .poster .title-container .movie-rating img {
     display: inline-block;
     height: 20px;
@@ -68,11 +86,18 @@ body {
 }
 
 
+.poster-image {
+    /*height: 100%;*/
+    width: 100%;
+}
+
 .poster-img {
     height: 92%;
     max-height: 92%;
-    /*background-image: url("../images/poster.png");*/
     background-size: 100%;
+    background-image: url("../images/poster.png");
+    background-size: contain;
+    background-position: 50%;
     background-repeat: no-repeat;
     margin: 0 auto;
 
@@ -89,4 +114,8 @@ body {
     top: 50%;
     transform: translateY(-50%);
 
+}
+
+.testme {
+    color: white;
 }
