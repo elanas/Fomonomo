@@ -95,7 +95,7 @@ body {
     height: 92%;
     max-height: 92%;
     background-size: 100%;
-    background-image: url("../images/poster.png");
+    /*background-image: url("../images/poster.png");*/
     background-size: contain;
     background-position: 50%;
     background-repeat: no-repeat;

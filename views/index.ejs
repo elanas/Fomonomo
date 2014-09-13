@@ -25,8 +25,8 @@
         function searchCallback(data) {
             var movies = data.movies;
             //console.log($(movies).first()[0].title);
-            $("div.movie-title").text($(movies).first()[0].title);
-            $("div.poster-img").html('<img style="background-image:url(\'' + $(movies).first()[0].posters.detailed + '\')" />');
+            $("div.movie-title_title-container").text($(movies).first()[0].title);
+            //$("div.poster-img").html('<img style="background-image:url(\'' + $(movies).first()[0].posters.detailed + '\')" />');
             console.log($(movies).first()[0].posters.detailed);
         }
     </script>
@@ -50,8 +50,9 @@
                         <!--<div>34%</div>-->
                     <!--</div>-->
                 <!--</div>-->
+
                 <div class="testme">
-                    <div class="movie-title title-container">Gamer</div>
+                    <div class="movie-title_title-container"></div>
                     <div class="movie-rating2">%34</div>
                     <img class="movie-rating-tomato" src="images/tomato.png"/>
                     <img class="poster-image" src="images/poster.png"/>
