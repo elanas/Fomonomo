@@ -44,6 +44,7 @@ body {
     height: 100%;
     max-height: 420px;
     overflow: scroll;
+    background-color: #202020;
 }
 
 
@@ -402,6 +403,14 @@ body {
     visibility: visible;
 }
 
+.greyArrow-left {
+    background-image: url('../images/grey-arrow-left.png') !important;
+}
+
+.greyArrow-right {
+    background-image: url('../images/grey-arrow-right.png') !important;
+}
+
 .movie-links-left {
     width: 40%;
     float: left;
@@ -444,6 +453,7 @@ body {
     background-image: url('../images/arrow-left.png');
 }
 
+<<<<<<< HEAD
 .poster-containert.ng-hide-add, .poster-container.ng-hide-remove {
     /* this is required as of 1.3x to properly
        apply all styling in a show/hide animation */
@@ -504,3 +514,7 @@ body {
 }
 
 
+.dimIcon {
+    background-color: white;
+    cursor:pointer;
+}
