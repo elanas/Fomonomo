@@ -44,6 +44,7 @@ body {
     height: 100%;
     max-height: 420px;
     overflow: scroll;
+    background-color: #202020;
 }
 
 
@@ -450,4 +451,9 @@ body {
 .arrow.left {
     right: 72%;
     background-image: url('../images/arrow-left.png');
+}
+
+.dimIcon {
+    background-color: white;
+    cursor:pointer;
 }

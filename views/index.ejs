@@ -15,7 +15,8 @@
 
 </head>
 <body ng-controller="webController as ctrl">
-        <div ng-hide="!showPoster" ng-init="toggleNav = false" class="nav-container" ng-class="{showFullNav:toggleNav}">
+        <div ng-hide="!showPoster" ng-init="toggleNav = false" class="nav-container"
+             ng-class="{showFullNav:toggleNav, dimIcon : !dim}" ng-mouseenter="dim=false" ng-mouseleave="dim=true">
             <div class="hamburger-container">
                 <img ng-click="toggleNav = !toggleNav" src="images/hamburgerButton.png"/>
                 <div ng-hide="!toggleNav" class="company">
