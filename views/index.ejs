@@ -19,33 +19,33 @@
             <div class="hamburger-container">
                 <img ng-click="toggleNav = !toggleNav" src="images/hamburgerButton.png"/>
                 <div ng-hide="!toggleNav" class="company">
-                    Scene
+                    <a>Scene</a>
                 </div>
             </div>
             <div ng-hide="!toggleNav" class="full-menu-container">
                 <div class="categories">
                     <ul>
-                        <li>Favorites</li>
+                        <li><a>Favorites</a></li>
                         <li>Genres
                             <ul class="genre-list">
-                                <li>Action</li>
-                                <li>Adventure</li>
-                                <li>Classic</li>
-                                <li>Comedy</li>
-                                <li>Documentary</li>
-                                <li>Drama</li>
-                                <li>Horror</li>
-                                <li>Thriller</li>
-                                <li>Romance</li>
+                                <li><a>Action</a></li>
+                                <li><a>Classic</a></li>
+                                <li><a>Comedy</a></li>
+                                <li><a>Documentary</a></li>
+                                <li><a>Drama</a></li>
+                                <li><a>Horror</a></li>
+                                <li><a>Thriller</a></li>
+                                <li><a>Romance</a></li>
                             </ul>
                         </li>
                         <li>Best of
                             <ul>
-                                <li>All Time</li>
-                                <li>2013</li>
-                                <li>2012</li>
+                                <li><a>All Time</a></li>
+                                <li><a>2013</a></li>
+                                <li><a>2012</a></li>
                             </ul>
                         </li>
+                        <li><a>About Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -53,27 +53,72 @@
     <div class="page-container" ng-click="hideIframe()">
         <div class="movie-container">
             <div ng-show="showPoster" class="poster animate-show" ng-init="showTabs = false">
-                <div class="poster-container"
+                <div class="poster-container" ng-show="index == 0"
                      ng-mouseenter="showPlayButton=true"
                      ng-mouseleave="showPlayButton=false">
-                    <div class="movie-title title-container"></div>
-                    <div class="movie-rating2"></div>
+                    <div class="movie-title title-container">{{posters[index].title}}</div>
+                    <div class="movie-rating2">{{posters[index].score}}%</div>
                     <img class="movie-rating-tomato" src="images/tomato.png"/>
-                    <!--<div ng-controller="MovieController">-->
-                        <!--<span ng-switch on="interface">-->
-                            <!--<img ng-switch-when="UP" src='green-checkmark.png'>-->
-                        <!--<img ng-click='switchMovie()' ng-model="poster" class="poster-image" src="images/poster1.png"/>-->
-                        <!--</span>-->
-                        <!--{{newMovie}}
+                    <img class="poster-image" src="{{posters[index].img}}"/>
+                    <div class="tabs tabs_default"  ng-class="{showTabs:showTabs}">
+                        <ul class="horizontal">
+                            <li ng-click="showTabs = true"><a href="#tab-1">Movie Info</a></li>
+                            <li ng-click="showTabs = true"><a href="#tab-2">tab</a></li>
+                            <li ng-click="showTabs = true"><a href="#tab-3">Recommendations (5)</a></li>
+                            <li><a ng-click="showTabs = false"> X </a></li>
+                        </ul>
+                        <div ng-show="showTabs" id="tab-1">
+                            <div class="synopsis">
+                                Filmed over 12 years with the same cast, Richard Linklater's BOYHOOD is a groundbreaking story of growing up as seen through the eyes of a child named Mason (a breakthrough performance by Ellar Coltrane), who literally grows up on screen before our eyes. Starring Ethan Hawke and Patricia Arquette as Mason's parents and newcomer Lorelei Linklater as his sister Samantha, BOYHOOD charts the rocky terrain of childhood like no other film has before. Snapshots of adolescence from road trips and family dinners to birthdays and graduations and all the moments in between become transcendent, set to a soundtrack spanning the years from Coldplay's Yellow to Arcade Fire's Deep Blue. BOYHOOD is both a nostalgic time capsule of the recent past and an ode to growing up and parenting. It's impossible to watch Mason and his family without thinking about our own journey. (c) Sundance Film Fest
+                            </div>
+                            <div class="generalInfo">
+                                R, 2 hr. 45 min.<br/>
+                                Drama<br/>
+                                Director: Richard Linklater<br/>
+                            </div>
+                        </div>
+                        <div ng-show="showTabs" id="tab-2">Tab 2</div>
+                        <div ng-show="showTabs" id="tab-3">
+                            <div class="recommendedTitle">These friend's have also favorited this movie:</div>
+                            <div class="friends">
+                                <div class="friendUnit">
+                                    <img src="images/friend1.png">
+                                    Stephen Rutman
+                                </div>
+                                <div class="friendUnit">
+                                    <img src="images/friend2.png">
+                                    Omar Peña
+                                </div>
+                                <div class="friendUnit">
+                                    <img src="images/friend3.png">
+                                    Maddie Gee
+                                </div>
+                                <div class="friendUnit">
+                                    <img src="images/friend4.png">
+                                    Christian Bersani
+                                </div>
+                                <div class="friendUnit">
+                                    <img src="images/friend5.png">
+                                    Samantha Klein
+                                </div>
+                                <!--<img src="images/friend2.png">-->
+                                <!--<img src="images/friend3.png">-->
+                                <!--<img src="images/friend4.png">-->
+                                <!--<img src="images/friend5.png">-->
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="more-info"></div>
-                    <div ng-click="showPoster=false; showIframe()" class="play-button" ng-show="showPlayButton"></div>
-                    <div id="tab-container">
-                        <ul>
-                            <li><a href="#tab-1-div">Movie Info</a></li>
-                            <li><a href="#that-other-tab">The Second Tab</a></li>
-                            <li><a href="#lastly">Tab C</a></li>-->
-                    <img class="poster-image" src="images/poster1.png"/>
+                    <div ng-click="showPoster=false; showIframe()" class="play-button" ng-class="{showPlayButton:showPlayButton}"></div>
+
+                </div>
+                <div class="poster-container" ng-show="index == 1"
+                     ng-mouseenter="showPlayButton=true"
+                     ng-mouseleave="showPlayButton=false">
+                    <div class="movie-title title-container">{{posters[index].title}}</div>
+                    <div class="movie-rating2">{{posters[index].score}}%</div>
+                    <img class="movie-rating-tomato" src="images/tomato.png"/>
+                    <img class="poster-image" src="{{posters[index].img}}"/>
                     <div class="tabs tabs_default"  ng-class="{showTabs:showTabs}">
                         <ul class="horizontal">
                             <li ng-click="showTabs = !showTabs"><a href="#tab-1">Movie Info</a></li>
@@ -119,6 +164,39 @@
                     <div ng-click="showPoster=false; showIframe()" class="play-button" ng-class="{showPlayButton:showPlayButton}"></div>
 
                 </div>
+
+                <div class="poster-container" ng-show="index == 2"
+                     ng-mouseenter="showPlayButton=true"
+                     ng-mouseleave="showPlayButton=false">
+                    <div class="movie-title title-container">{{posters[index].title}}</div>
+                    <div class="movie-rating2">{{posters[index].score}}%</div>
+                    <img class="movie-rating-tomato" src="images/tomato.png"/>
+                    <img class="poster-image" src="{{posters[index].img}}"/>
+                    <div class="tabs tabs_default"  ng-class="{showTabs:showTabs}">
+                        <ul class="horizontal">
+                            <li ng-click="showTabs = !showTabs"><a href="#tab-1">Movie Info</a></li>
+                            <li><a href="#tab-2">tab</a></li>
+                            <li><a href="#tab-3">tab</a></li>
+                        </ul>
+                        <div ng-show="showTabs" id="tab-1">
+                            <div class="synopsis">
+                                Filmed over 12 years with the same cast, Richard Linklater's BOYHOOD is a groundbreaking story of growing up as seen through the eyes of a child named Mason (a breakthrough performance by Ellar Coltrane), who literally grows up on screen before our eyes. Starring Ethan Hawke and Patricia Arquette as Mason's parents and newcomer Lorelei Linklater as his sister Samantha, BOYHOOD charts the rocky terrain of childhood like no other film has before. Snapshots of adolescence from road trips and family dinners to birthdays and graduations and all the moments in between become transcendent, set to a soundtrack spanning the years from Coldplay's Yellow to Arcade Fire's Deep Blue. BOYHOOD is both a nostalgic time capsule of the recent past and an ode to growing up and parenting. It's impossible to watch Mason and his family without thinking about our own journey. (c) Sundance Film Fest
+                            </div>
+                            <div class="generalInfo">
+                                R, 2 hr. 45 min.<br/>
+                                Drama<br/>
+                                Director: Richard Linklater<br/>
+                            </div>
+                        </div>
+                        <div ng-show="showTabs" id="tab-2">Tab 2</div>
+                        <div ng-show="showTabs" id="tab-3">Tab 3</div>
+                    </div>
+                    <div ng-click="showPoster=false; showIframe()" class="play-button" ng-class="{showPlayButton:showPlayButton}"></div>
+
+                </div>
+
+                <div class="arrow right" ng-click="nextPoster()"></div>
+                <div class="arrow left" ng-click="prevPoster()"></div>
                 <!--<div class="poster-img"></div>-->
             </div>
             <div id="player" class="trailer animate-show">
