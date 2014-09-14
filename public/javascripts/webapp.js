@@ -36,17 +36,23 @@
             // when video ends
             function onPlayerStateChange(event) {
                 if(event.data === 0) {
-//                    alert('done');
+                    p.previousVideo();
+                    $scope.hideIframe();
+                    console.log('it ended!');
+                    setTimeout(function() {
+                        $scope.hideIframe();
+                        $('.poster').removeClass('ng-hide');
+                        p.seekTo(0, true);
+                    }, 0);
                 }
             }
         });
 
-        var beenClicked = false;
         $scope.showIframe = function() {
             setTimeout(function() {
                 $('#player').css('visibility','visible');
+                $('.poster').addClass('ng-hide');
                 p.playVideo();
-                beenClicked = true;
             }, 2000);
         }
 
@@ -57,7 +63,6 @@
             $('#player').css('visibility','hidden');
             p.stopVideo();
             $scope.showPoster = true;
-            console.log('hiding');
         }
 
     }]);
