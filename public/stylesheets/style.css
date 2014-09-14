@@ -270,8 +270,6 @@ body {
     width: 38%;
     overflow: scroll;
     height: 75% !important;
-
-
 }
 
 .trailer {
@@ -370,4 +368,26 @@ body {
 
 .play-button.showPlayButton {
     visibility: visible;
+}
+
+.arrow {
+    height: 30%;
+    width: 10%;
+    /*background-color: white;*/
+    position: absolute;
+    top: 42%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+}
+
+.arrow.right {
+    left: 75%;
+    background-image: url('../images/arrow-right.png');
+}
+
+.arrow.left {
+    right: 72%;
+    background-image: url('../images/arrow-left.png');
+
 }

@@ -82,7 +82,7 @@ var longStringWithYearsToDB = function (longString) {
         console.log(count);
     }, 1000)
 };
-longStringWithYearsToDB(best2010LongString);
+//longStringWithYearsToDB(best2010LongString);
 
 
 var all = [popular, action, animated, comedy, romance];
@@ -107,9 +107,9 @@ function searchCallback(data) {
     var movies = data.movies;
     var movie = $(movies).first()[0];
     popJSON.push(movie);
-    $("div.movie-title").text(popJSON[0].title);
-    $("img.poster-image").attr("src", popJSON[0].posters.detailed.toString().substring(0, popJSON[0].posters.detailed.toString().length - 7) + "ori.jpg");
-    $("div.movie-rating2").text("%" + popJSON[0].ratings.critics_score);
+//    $("div.movie-title").text(popJSON[0].title);
+//    $("img.poster-image").attr("src", popJSON[0].posters.detailed.toString().substring(0, popJSON[0].posters.detailed.toString().length - 7) + "ori.jpg");
+//    $("div.movie-rating2").text("%" + popJSON[0].ratings.critics_score);
 }
 
 

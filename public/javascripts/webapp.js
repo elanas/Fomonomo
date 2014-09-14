@@ -11,6 +11,25 @@
         $scope.showPoster = true;
         $scope.showPlayButton = false;
 
+        $scope.posters = [
+            {img: 'images/poster.png', score: "93", title: "Gamer"},
+            {img: 'images/poster1.png', score: "99", title: "Boyhood"},
+            {img: 'images/eurotrip.png', score: "77", title: "Eurotrip"}];
+
+        $scope.index = 0;
+
+        $scope.nextPoster = function() {
+            $scope.index = ($scope.index + 1)% $scope.posters.length;
+        }
+
+        $scope.prevPoster = function() {
+            if($scope.index == 0) {
+                $scope.index = $scope.posters.length-1;
+            } else {
+                $scope.index = ($scope.index - 1);
+            }
+        }
+
         var p;
         $(document).ready(function() {
             console.log('running')
