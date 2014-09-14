@@ -40,6 +40,7 @@ body {
 
 .nav-container.showFullNav {
     width: 150px;
+    width: 150px;
     height: 100%;
     max-height: 420px;
     overflow: scroll;
@@ -156,8 +157,9 @@ body {
     display: inline-block;
     height: 20px;
     position: relative;
-    top: 1px;
+    top: -2px;
     float: right;
+    left: -3px;
 }
 
 .poster .title-container .movie-rating img {
