@@ -8,7 +8,7 @@ body {
     font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: black;
     height: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
 
 }
 
@@ -191,6 +191,19 @@ body {
 
 }
 
+#tab-container ul {
+    list-style-type: none;
+    -webkit-padding-start: 0px;
+    padding-start: 0px;
+}
+
+#tab-container ul li {
+    display:inline-block;
+    width:auto;
+    vertical-align:top;
+    overflow:hidden;
+}
+
 .trailer {
     width: 95%;
     max-height: 1200px;
@@ -268,7 +281,8 @@ body {
     background-image: url('../images/playTrailerButton.png');
     position: relative;
     top: -62%;
-    background-size: cover;
+    background-size: contain;
     left: 25%;
     cursor: pointer;
+    background-repeat: no-repeat;
 }
