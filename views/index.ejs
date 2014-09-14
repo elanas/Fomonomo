@@ -77,8 +77,8 @@
                     <div class="tabs tabs_default"  ng-class="{showTabs:showTabs}">
                         <ul class="horizontal">
                             <li ng-click="showTabs = !showTabs"><a href="#tab-1">Movie Info</a></li>
-                            <li><a href="#tab-2">tab</a></li>
-                            <li><a href="#tab-3">tab</a></li>
+                            <li><a href="#tab-2">Watch</a></li>
+                            <li><a href="#tab-3">Friends</a></li>
                         </ul>
                         <div ng-show="showTabs" id="tab-1">
                             <div class="synopsis">
@@ -90,8 +90,17 @@
                                 Director: Richard Linklater<br/>
                             </div>
                         </div>
-                        <div ng-show="showTabs" id="tab-2">Tab 2</div>
-                        <div ng-show="showTabs" id="tab-3">Tab 3</div>
+                        <div ng-show="showTabs" id="tab-2">
+                            <div class="watch-links">
+                                <img class="watch-image-left" src="/images/netflix-logo.png" href="http://www.netflix.com">
+                                <img class="watch-image-right" src="/images/amazoninstantvideo.png" href="http://www.amazon.com">
+                            </div>
+                        </div>
+                        <div ng-show="showTabs" id="tab-3">
+                            <p>
+                                These are your Facebook friends. You have none.
+                            </p>
+                        </div>
                     </div>
                     <div ng-click="showPoster=false; showIframe()" class="play-button" ng-class="{showPlayButton:showPlayButton}"></div>
 

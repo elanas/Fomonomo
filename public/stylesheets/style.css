@@ -237,6 +237,9 @@ body {
 /*#tab-container div {*/
     /*margin: 0px;*/
 /*}*/
+
+
+
 .tabs {
     position: relative;
     top: -32px;
@@ -370,4 +373,15 @@ body {
 
 .play-button.showPlayButton {
     visibility: visible;
+}
+
+.watch-image-left {
+    width: 30%;
+    padding-left: 8%;
+}
+
+.watch-image-right {
+    float: right;
+    width: 30%;
+    padding-right: 8%;
 }
