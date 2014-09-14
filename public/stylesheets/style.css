@@ -8,6 +8,7 @@ body {
     font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: black;
     height: 100%;
+    overflow: hidden;
 
 }
 
@@ -203,10 +204,10 @@ body {
 
 .animate-show.ng-hide-add,
 .animate-show.ng-hide-remove {
-    -webkit-transition:all linear 2s;
-    -moz-transition:all linear 2s;
-    -o-transition:all linear 2s;
-    transition:all linear 2s;
+    -webkit-transition:all linear 1s;
+    -moz-transition:all linear 1s;
+    -o-transition:all linear 1s;
+    transition:all linear 1s;
     /*display:block!important;*/
 }
 
