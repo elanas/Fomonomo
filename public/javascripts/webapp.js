@@ -23,6 +23,9 @@
                     events: {
                         'onReady': onPlayerReady,
                         'onStateChange': onPlayerStateChange
+                    },
+                    playerVars: {
+                        'autohide': 1
                     }
                 });
                 p = player;
