@@ -63,7 +63,7 @@
                     <div class="tabs tabs_default"  ng-class="{showTabs:showTabs}">
                         <ul class="horizontal">
                             <li ng-click="showTabs = true"><a href="#tab-1">Movie Info</a></li>
-                            <li ng-click="showTabs = true"><a href="#tab-2">tab</a></li>
+                            <li ng-click="showTabs = true"><a href="#tab-2">Watch Now</a></li>
                             <li ng-click="showTabs = true"><a href="#tab-3">Recommendations (5)</a></li>
                             <li><a ng-click="showTabs = false"> X </a></li>
                         </ul>
@@ -77,7 +77,26 @@
                                 Director: Richard Linklater<br/>
                             </div>
                         </div>
-                        <div ng-show="showTabs" id="tab-2">Tab 2</div>
+                        <div ng-show="showTabs" id="tab-2">
+                            <div class="watch-links">
+                                <div class="movie-links-left">
+                                    <a href="http://www.netflix.com">
+                                        <img class="watch-image-left" src="/images/netflix-logo.png">
+                                    </a>
+                                    <a href="http://www.itunes.com">
+                                        <img class="watch-image-left" src="/images/itunes-logo.jpg">
+                                    </a>
+                                </div>
+                                <div class="movie-links-right">
+                                    <a href="http://www.amazon.com">
+                                        <img class="watch-image-right" src="/images/amazoninstantvideo.png">
+                                    </a>
+                                    <a href="http://www.megavideo.com">
+                                        <img class="watch-image-right" src="/images/megavideo-logo.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <div ng-show="showTabs" id="tab-3">
                             <div class="recommendedTitle">These friend's have also favorited this movie:</div>
                             <div class="friends">
@@ -121,9 +140,10 @@
                     <img class="poster-image" src="{{posters[index].img}}"/>
                     <div class="tabs tabs_default"  ng-class="{showTabs:showTabs}">
                         <ul class="horizontal">
-                            <li ng-click="showTabs = !showTabs"><a href="#tab-1">Movie Info</a></li>
-                            <li><a href="#tab-2">tab</a></li>
-                            <li><a href="#tab-3">tab</a></li>
+                            <li  ng-click="showTabs = true"><a href="#tab-1">Movie Info</a></li>
+                            <li  ng-click="showTabs = true"><a href="#tab-2">Watch Now</a></li>
+                            <li  ng-click="showTabs = true"><a href="#tab-3">Recommendations (0)</a></li>
+                            <li><a ng-click="showTabs = false"> X </a></li>
                         </ul>
                         <div ng-show="showTabs" id="tab-1">
                             <div class="synopsis">
@@ -135,8 +155,31 @@
                                 Director: Richard Linklater<br/>
                             </div>
                         </div>
-                        <div ng-show="showTabs" id="tab-2">Tab 2</div>
-                        <div ng-show="showTabs" id="tab-3">Tab 3</div>
+                        <div ng-show="showTabs" id="tab-2">
+                            <div class="watch-links">
+                                <div class="movie-links-left">
+                                    <a href="http://www.netflix.com">
+                                        <img class="watch-image-left" src="/images/netflix-logo.png">
+                                    </a>
+                                    <a href="http://www.itunes.com">
+                                        <img class="watch-image-left" src="/images/itunes-logo.jpg">
+                                    </a>
+                                </div>
+                                <div class="movie-links-right">
+                                    <a href="http://www.amazon.com">
+                                        <img class="watch-image-right" src="/images/amazoninstantvideo.png">
+                                    </a>
+                                    <a href="http://www.megavideo.com">
+                                        <img class="watch-image-right" src="/images/megavideo-logo.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-show="showTabs" id="tab-3">
+                            <p>
+                                None of your friends recommend this movie.
+                            </p>
+                        </div>
                     </div>
                     <div ng-click="showPoster=false; showIframe()" class="play-button" ng-class="{showPlayButton:showPlayButton}"></div>
 
@@ -151,9 +194,10 @@
                     <img class="poster-image" src="{{posters[index].img}}"/>
                     <div class="tabs tabs_default"  ng-class="{showTabs:showTabs}">
                         <ul class="horizontal">
-                            <li ng-click="showTabs = !showTabs"><a href="#tab-1">Movie Info</a></li>
-                            <li><a href="#tab-2">tab</a></li>
-                            <li><a href="#tab-3">tab</a></li>
+                            <li  ng-click="showTabs = true"><a href="#tab-1">Movie Info</a></li>
+                            <li  ng-click="showTabs = true"><a href="#tab-2">Watch Now</a></li>
+                            <li  ng-click="showTabs = true"><a href="#tab-3">Recommendations (3)</a></li>
+                            <li><a ng-click="showTabs = false"> X </a></li>
                         </ul>
                         <div ng-show="showTabs" id="tab-1">
                             <div class="synopsis">
@@ -165,7 +209,26 @@
                                 Director: Richard Linklater<br/>
                             </div>
                         </div>
-                        <div ng-show="showTabs" id="tab-2">Tab 2</div>
+                        <div ng-show="showTabs" id="tab-2">
+                            <div class="watch-links">
+                                <div class="movie-links-left">
+                                    <a href="http://www.netflix.com">
+                                        <img class="watch-image-left" src="/images/netflix-logo.png">
+                                    </a>
+                                    <a href="http://www.itunes.com">
+                                        <img class="watch-image-left" src="/images/itunes-logo.jpg">
+                                    </a>
+                                </div>
+                                <div class="movie-links-right">
+                                    <a href="http://www.amazon.com">
+                                        <img class="watch-image-right" src="/images/amazoninstantvideo.png">
+                                    </a>
+                                    <a href="http://www.megavideo.com">
+                                        <img class="watch-image-right" src="/images/megavideo-logo.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <div ng-show="showTabs" id="tab-3">Tab 3</div>
                     </div>
                     <div ng-click="showPoster=false; showIframe()" class="play-button" ng-class="{showPlayButton:showPlayButton}"></div>
