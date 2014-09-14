@@ -2,6 +2,8 @@
  * Created by elanastroud on 9/13/14.
  */
 
+var test;
+
 (function () {
 
     var app = angular.module("webapp", ['ngAnimate']);
@@ -21,6 +23,8 @@
         $scope.nextPoster = function() {
             $scope.index = ($scope.index + 1)% $scope.posters.length;
         }
+
+//        this.test = $scope.nextPoster();
 
         $scope.prevPoster = function() {
             if($scope.index == 0) {
@@ -85,7 +89,24 @@
 
         }
 
+        $(document).keydown(function(e) {
+        console.log(e.keyCode);
+            if(e.keyCode === 37) {
+                $scope.prevPoster();
+                $scope.$apply();
+            }
+            if(e.keyCode === 39) {
+                $scope.nextPoster();
+                $scope.$apply();
+
+            }
+        });
+
     }]);
+
+
+
+
 
 })();
 
