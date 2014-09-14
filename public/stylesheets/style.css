@@ -60,7 +60,7 @@ body {
     font-weight: lighter;
     display: inline;
     position: absolute;
-    top: 8px;
+    top: 12px;
     left: 45px;
 }
 
@@ -76,8 +76,8 @@ body {
 
 .nav-container ul {
     list-style-type: none;
-    -webkit-padding-start: 25px;
-    padding-start: 25px;
+    -webkit-padding-start: 0px;
+    padding-start: 0px;
 }
 
 .nav-container ul li {
@@ -85,7 +85,7 @@ body {
 }
 
 .nav-container ul li:first-child {
-    margin-top: 5px;
+    margin-top: -10px;
 }
 
 .genre-list li:nth-child(6) {
@@ -191,17 +191,87 @@ body {
 
 }
 
-#tab-container ul {
-    list-style-type: none;
-    -webkit-padding-start: 0px;
-    padding-start: 0px;
+/*#tab-container {*/
+    /*position: relative;*/
+    /*top: -30%;*/
+    /*left: 1px;*/
+    /*opacity: .75;*/
+    /*background-color: #202020;*/
+    /*height: 30%;*/
+/*}*/
+
+/*#tab-container a {*/
+    /*text-decoration: none;*/
+    /*color: white;*/
+/*}*/
+
+/*#tab-container ul {*/
+    /*list-style-type: none;*/
+    /*-webkit-padding-start: 0px;*/
+    /*padding-start: 0px;*/
+    /*margin-bottom: 0px;*/
+    /*margin-bottom: -1px;*/
+/*}*/
+
+/*#tab-container ul li {*/
+    /*display: inline-block;*/
+    /*width: auto;*/
+    /*vertical-align: top;*/
+    /*overflow: hidden;*/
+    /*background-color: #101010;*/
+    /*margin: -2px;*/
+    /*border: 1px solid blue;*/
+    /*border-bottom: none;*/
+/*}*/
+
+/*#tab-container ul li a {*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*padding: 4px 4px 0px 4px;*/
+/*}*/
+
+/*#tab-container ul li .active  {*/
+    /*background-color: #202020;*/
+/*}*/
+
+/*#tab-container div {*/
+    /*margin: 0px;*/
+/*}*/
+.tabs {
+    position: relative;
+    top: -32px;
+    opacity: .8;
+    height: 23%;
 }
 
-#tab-container ul li {
-    display:inline-block;
-    width:auto;
-    vertical-align:top;
-    overflow:hidden;
+.tabs div {
+    padding: 3px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin: 0 auto;
+    font-weight: 100;
+    font-family: Helvetica Neue;
+    background: #202020 !important;
+    height: 100%;
+    /*display: none !important;*/
+}
+
+.synopsis {
+    width: 56%;
+    height: 75% !important;
+    overflow: scroll;
+    display: inline-block;
+}
+
+.generalInfo {
+    display: inline-block;
+    float: right;
+    text-align: right;
+    width: 38%;
+    overflow: scroll;
+    height: 75% !important;
+
+
 }
 
 .trailer {
@@ -252,6 +322,17 @@ body {
     /*background:white;*/
 /*}*/
 
+.tabs {
+    -webkit-transition:all ease-in-out	 .3s;
+    -moz-transition:all ease-in-out	 .3s;
+    -o-transition:all ease-in-out	 .3s;
+    transition:all ease-in-out	 .3s;
+}
+
+.tabs.showTabs {
+    top: -28%;
+}
+
 
 
 .poster-container {
@@ -261,7 +342,6 @@ body {
 
 #player {
     visibility:hidden;
-
     width: 95%;
     max-height: 1200px;
     height: 75%;
@@ -280,9 +360,14 @@ body {
     width: 45%;
     background-image: url('../images/playTrailerButton.png');
     position: relative;
-    top: -62%;
+    top: -80%;
     background-size: contain;
     left: 25%;
     cursor: pointer;
     background-repeat: no-repeat;
+    visibility: hidden;
+}
+
+.play-button.showPlayButton {
+    visibility: visible;
 }
