@@ -402,6 +402,14 @@ body {
     visibility: visible;
 }
 
+.greyArrow-left {
+    background-image: url('../images/grey-arrow-left.png') !important;
+}
+
+.greyArrow-right {
+    background-image: url('../images/grey-arrow-right.png') !important;
+}
+
 .movie-links-left {
     width: 40%;
     float: left;

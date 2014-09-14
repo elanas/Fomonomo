@@ -235,8 +235,11 @@
 
                 </div>
 
-                <div class="arrow right" ng-click="nextPoster()"></div>
-                <div class="arrow left" ng-click="prevPoster()"></div>
+                <div class="arrow left" ng-mouseenter="leftArrow=true" ng-mouseleave="leftArrow=false"
+                     ng-click="nextPoster()" ng-class="{'greyArrow-left':!leftArrow}"></div>
+                <div class="arrow right"
+                    ng-mouseenter="rightArrow=true" ng-mouseleave="rightArrow=false"
+                     ng-click="prevPoster()" ng-class="{'greyArrow-right':!rightArrow}"></div>
                 <!--<div class="poster-img"></div>-->
             </div>
             <div id="player" class="trailer animate-show">
