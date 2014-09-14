@@ -46,7 +46,7 @@ function searchCallback(data) {
     popJSON.push(movie);
     $("div.movie-title").text(popJSON[0].title);
     $("img.poster-image").attr("src", popJSON[0].posters.detailed.toString().substring(0, popJSON[0].posters.detailed.toString().length - 7) + "ori.jpg");
-    $("div.movie-rating2").text("%" + popJSON[0].ratings.critics_score);
+    $("div.movie-rating2").text(popJSON[0].ratings.critics_score + "%");
 }
 
 
