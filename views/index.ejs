@@ -37,6 +37,41 @@
 
 </head>
 <body ng-controller="webController as ctrl">
+        <div ng-init="toggleNav = false" class="nav-container" ng-animate="navAnimat">
+            <div ng-click="toggleNav = !toggleNav" class="hamburger-container">
+                <img src="images/hamburgerButton.png"/>
+                <div ng-hide="!toggleNav" class="company">
+                    Scene
+                </div>
+            </div>
+            <div ng-hide="!toggleNav" class="full-menu-container">
+                <div class="categories">
+                    <ul>
+                        <li>Favorites</li>
+                        <li>Genres
+                            <ul class="genre-list">
+                                <li>Action</li>
+                                <li>Adventure</li>
+                                <li>Classic</li>
+                                <li>Comedy</li>
+                                <li>Documentary</li>
+                                <li>Drama</li>
+                                <li>Horror</li>
+                                <li>Thriller</li>
+                                <li>Romance</li>
+                            </ul>
+                        </li>
+                        <li>Best of
+                            <ul>
+                                <li>All Time</li>
+                                <li>2013</li>
+                                <li>2012</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     <div class="page-container" ng-click="hideIframe()">
         <div class="movie-container">
             <div ng-click="showPoster=false; showIframe()" ng-show="showPoster" class="poster animate-show">
@@ -49,26 +84,7 @@
                 <!--<div class="poster-img"></div>-->
             </div>
             <div id="player" class="trailer animate-show">
-                <!--<div id="player"></div>-->
-                <!--<embed width="99%" height="99%"-->
-                       <!--src="http://www.youtube.com/v/Y0oX0xiwOv8">-->
-                <!--<iframe width="99%" height="100%"-->
-                        <!--src=" http://www.youtube.com/embed/Y0oX0xiwOv8?autohide=0&controls=0">-->
-                    <!--http://www.youtube.com/embed/VIDEO_ID-->
-                <!--</iframe>-->
-
-                <!--<iframe width="99%" height="99%" src="http://www.youtube.com/embed/Y0oX0xiwOv8?-->
-                        <!--rel=0&vq=hd1080&autohide=1&autoplay=1&border=1&color1=#096100&controls=0&hd=1&modestbranding=1"-->
-                        <!--frameborder="0" allowfullscreen>-->
-                <!--</iframe>-->
-
-                <!--<iframe id="vidId" width="100%" height="100%" src="https://www.youtube.com/embed/LFphYRyH7wc?rel=0&autohide=1&autoplay=1&vq=hd1080"-->
-                        <!--frameborder="0" allowfullscreen>-->
-                <!--</iframe>-->
-
-
-
-        </div>
+          </div>
     </div>
 </div>
 <script type="text/javascript" src="bower_components/imagesloaded/imagesloaded.pkgd.js"></script>
