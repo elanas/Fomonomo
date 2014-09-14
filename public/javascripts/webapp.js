@@ -19,29 +19,29 @@ var test;
 //            {img: 'images/poster1.png', score: "99", title: "Boyhood"},
 //            {img: 'images/eurotrip.png', score: "77", title: "Eurotrip"}];
 
+        console.log(MOVIEARR);
 
-////
-////        var imgStr = 'posters[original]';
-////        var rating = 'ratings[critics_score]';
-////
-////        var getImgUrl = function(orig) {
-////            var str = orig.substring(0,orig.length-7) + 'ori.jpg';
-////            return str;
-////        }
-////
-////        var makePosterObject = function(i) {
-////            return {img: getImgUrl(MOVIEARR[i].info[imgStr]), score: MOVIEARR[i].info[rating], title: MOVIEARR[i].info.title};
-////        }
-////
-////        $scope.posters = [
-////            makePosterObject(7), makePosterObject(1),makePosterObject(2)];
-//
-//
-//
-////        console.log(JSON.stringify({img: MOVIEARR[0].info.posters['original'], score: MOVIEARR[0].info.ratings.critics_score, title: MOVIEARR[0].info.title}));
-//
-//
-//        $scope.index = 0;
+        var imgStr = 'posters[original]';
+        var rating = 'ratings[critics_score]';
+
+        var getImgUrl = function(orig) {
+            var str = orig.substring(0,orig.length-7) + 'ori.jpg';
+            return str;
+        }
+
+        var makePosterObject = function(i) {
+            return {img: getImgUrl(MOVIEARR[i].info[imgStr]), score: MOVIEARR[i].info[rating], title: MOVIEARR[i].info.title};
+        }
+
+        $scope.posters = [
+            makePosterObject(7), makePosterObject(1),makePosterObject(2)];
+
+
+
+//        console.log(JSON.stringify({img: MOVIEARR[0].info.posters['original'], score: MOVIEARR[0].info.ratings.critics_score, title: MOVIEARR[0].info.title}));
+
+
+        $scope.index = 0;
 
         var count = 0;
         $scope.nextPoster = function() {
