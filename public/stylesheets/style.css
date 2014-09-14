@@ -8,7 +8,7 @@ body {
     font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: black;
     height: 100%;
-    /*overflow: hidden;*/
+    overflow: hidden;
 
 }
 
@@ -393,6 +393,7 @@ body {
     cursor: pointer;
     background-repeat: no-repeat;
     visibility: hidden;
+    opacity: .8;
 }
 
 .play-button.showPlayButton {
