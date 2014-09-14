@@ -57,7 +57,22 @@ all.forEach(function(genre) {
             $.ajax({
                 url: moviesSearchUrl + '&q=' + encodeURI(title),
                 dataType: "jsonp",
-                success: searchCallback
+                success: function (data) {
+                    console.log(JSON.stringify(data.movies[0]));
+                    if (console.log(data.movies.length));
+                    $.ajax({
+                        type: 'POST',
+                        url: '/movies',
+                        dataType: "jsonp",
+                        data: data.movies[0],
+                        success: function() {
+                            console.log('posted!')
+                        },
+                        error: function(err) {
+                            console.log('failure');
+                        }
+                    })
+                }
             });
         });
         // callback for when we get back the results
