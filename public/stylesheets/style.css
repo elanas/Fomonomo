@@ -262,7 +262,10 @@ body {
 }
 
 .play-button {
-    height: 100px;
-    width: 100px;
+    position: relative;
+    height: 5%;
+    width: 5%;
     background-color: white;
+    top: 50%;
+    left: 20%;
 }
