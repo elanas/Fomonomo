@@ -57,7 +57,13 @@
                     <div class="movie-title title-container"></div>
                     <div class="movie-rating2"></div>
                     <img class="movie-rating-tomato" src="images/tomato.png"/>
-                    <img class="poster-image" src="images/poster1.png"/>
+                    <div ng-controller="MovieController">
+                        <!--<span ng-switch on="interface">-->
+                            <!--<img ng-switch-when="UP" src='green-checkmark.png'>-->
+                        <img ng-click='switchMovie()' ng-model="poster" class="poster-image" src="images/poster1.png"/>
+                        <!--</span>-->
+                        {{newMovie}}
+                    </div>
                     <div class="more-info"></div>
                     <div ng-click="showPoster=false; showIframe()" class="play-button" ng-show="showPlayButton"></div>
                     <div id="tab-container">
