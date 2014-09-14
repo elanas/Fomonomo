@@ -48,7 +48,7 @@
                 $('#player').css('visibility','visible');
                 $('.poster').addClass('ng-hide');
                 p.playVideo();
-            }, 2000);
+            }, 1000);
         }
 
         $scope.hideIframe = function() {
