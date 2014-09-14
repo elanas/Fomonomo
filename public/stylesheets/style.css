@@ -60,7 +60,7 @@ body {
     font-weight: lighter;
     display: inline;
     position: absolute;
-    top: 8px;
+    top: 12px;
     left: 45px;
 }
 
@@ -76,8 +76,8 @@ body {
 
 .nav-container ul {
     list-style-type: none;
-    -webkit-padding-start: 25px;
-    padding-start: 25px;
+    -webkit-padding-start: 0px;
+    padding-start: 0px;
 }
 
 .nav-container ul li {
@@ -85,7 +85,7 @@ body {
 }
 
 .nav-container ul li:first-child {
-    margin-top: 5px;
+    margin-top: -10px;
 }
 
 .genre-list li:nth-child(6) {
@@ -241,12 +241,14 @@ body {
     position: relative;
     top: -32px;
     opacity: .8;
-    height: 25%;
+    height: 23%;
 }
 
 .tabs div {
     padding: 3px;
+    padding-top: 10px;
     padding-bottom: 0px;
+    margin: 0 auto;
     font-weight: 100;
     font-family: Helvetica Neue;
     background: #202020 !important;
@@ -256,7 +258,7 @@ body {
 
 .synopsis {
     width: 56%;
-    height: 75%;
+    height: 75% !important;
     overflow: scroll;
     display: inline-block;
 }
@@ -267,7 +269,7 @@ body {
     text-align: right;
     width: 38%;
     overflow: scroll;
-    height: 75%;
+    height: 75% !important;
 
 
 }
@@ -328,7 +330,7 @@ body {
 }
 
 .tabs.showTabs {
-    top: -30%;
+    top: -28%;
 }
 
 
@@ -358,7 +360,7 @@ body {
     width: 45%;
     background-image: url('../images/playTrailerButton.png');
     position: relative;
-    top: -62%;
+    top: -80%;
     background-size: contain;
     left: 25%;
     cursor: pointer;
