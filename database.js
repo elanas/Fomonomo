@@ -21,8 +21,7 @@ var getRandomPoster = function() {
 
 var arr = [];
 var count = 0;
-console.log("do i run");
-exports.getAsArray = function() {
+var getAsArray = function() {
     db['movies'].find({}, function(err, cursor){
         cursor.forEach(function(obj) {
            arr.push(obj);

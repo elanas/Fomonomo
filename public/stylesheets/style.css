@@ -75,6 +75,9 @@ body {
     margin-right: 2px;
 }
 
+.nav-container a:active {
+    color: white;
+}
 
 .nav-container ul {
     list-style-type: none;
@@ -280,6 +283,15 @@ body {
 .recommendedTitle {
     height: auto !important;
     padding: 5px !important;
+    position: relative;
+    top: -7px;
+}
+
+.recommendedTitle img {
+    width: 10%;
+    position: relative;
+    top: 6px;
+
 }
 
 .friends {
