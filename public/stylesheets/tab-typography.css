@@ -73,8 +73,9 @@ BODY {
  * -------------------------------------------------------------------------------------------------
  */
 A {
-	color: black;
-	text-decoration: none
+	/*color: black;*/
+	/*text-decoration: none*/
+    cursor: pointer;
 }
 
 A:hover {

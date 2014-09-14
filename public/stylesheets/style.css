@@ -41,7 +41,7 @@ body {
 .nav-container.showFullNav {
     width: 150px;
     height: 100%;
-    max-height: 410px;
+    max-height: 420px;
     overflow: scroll;
 }
 
@@ -273,6 +273,32 @@ body {
 
 
 }
+.recommendedTitle {
+    height: auto !important;
+    padding: 5px !important;
+}
+
+.friends {
+    width: 100%;
+    height: auto !important;
+    position: relative;
+    top: -10px;
+}
+
+.friendUnit {
+    width: 15%;
+    text-align: center;
+    display: inline-table;
+    height: auto !important;
+    margin-left: 5px !important;
+}
+
+.friends img {
+    width: 85%;
+    border-radius: 100%;
+    clear: both;
+    opacity: 1;
+}
 
 .trailer {
     width: 95%;
@@ -360,7 +386,7 @@ body {
     width: 45%;
     background-image: url('../images/playTrailerButton.png');
     position: relative;
-    top: -80%;
+    top: -90%;
     background-size: contain;
     left: 25%;
     cursor: pointer;
