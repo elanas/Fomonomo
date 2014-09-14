@@ -9,31 +9,8 @@
     <script src="http://www.youtube.com/iframe_api"></script>
     <script src="http://www.youtube.com/player_api"></script>
     <script type="text/javascript" src="javascripts/webapp.js"></script>
-    <script>
-        var apikey = "up3wv3uvufs74w5yqh2tdpza";
-        var baseUrl = "http://api.rottentomatoes.com/api/public/v1.0";
-        // construct the uri with our apikey
-        var moviesSearchUrl = baseUrl + '/movies.json?apikey=' + apikey;
-        var query = "Boyhood";
-        $(document).ready(function() {
-            // send off the query
-            $.ajax({
-                url: moviesSearchUrl + '&q=' + encodeURI(query),
-                dataType: "jsonp",
-                success: searchCallback
-            });
-        });
-        // callback for when we get back the results
-        function searchCallback(data) {
-            var movies = data.movies;
-            var movie = $(movies).first()[0];
-            //console.log($(movies).first()[0].title);
-            $("div.movie-title").text(movie.title);
-            $("img.poster-image").attr("src", movie.posters.detailed.toString().substring(0, movie.posters.detailed.toString().length - 7) + "ori.jpg");
-            $("div.movie-rating2").text(movie.ratings.critics_score + "%");
-            console.log(movie.posters.original);
-        }
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/movie-crawler.js"></script>
 
 </head>
 <body ng-controller="webController as ctrl">
