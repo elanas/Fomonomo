@@ -15,15 +15,27 @@ body {
     background-color: #202020;
     position: absolute;
     left: 5%;
-    /*width: 50px;*/
-    /*height: 50px;*/
-}
+    height: 30px;
+    width: 30px;
+    padding: 5px 6px;
 
-.nav-container .full-menu-container {
     color: #a7a7a7;
     font-size: 16px;
     font-weight: lighter;
     padding-bottom: 2px;
+    overflow: scroll;
+}
+
+/*.nav-container {*/
+    /*-webkit-transition: all linear .2s;*/
+    /*-moz-transition: all linear .2s;*/
+    /*-o-transition: all linear .2s;*/
+    /*transition: all linear .2s;*/
+/*}*/
+
+
+
+.nav-container.showFullNav {
     width: 150px;
     height: 100%;
     max-height: 410px;
@@ -33,7 +45,6 @@ body {
 
 .nav-container .hamburger-container {
     height: 30px;
-    padding: 5px 6px;
 }
 
 .nav-container .hamburger-container img {
@@ -45,9 +56,9 @@ body {
     font-size: 22px;
     font-weight: lighter;
     display: inline;
-    position: relative;
-    top: -7px;
-    left: 10px;
+    position: absolute;
+    top: 8px;
+    left: 45px;
 }
 
 
@@ -211,6 +222,19 @@ body {
     /*border:1px solid black;*/
     /*background:white;*/
 }
+
+
+/*.nav-container.showFullNav{*/
+    /*line-height:20px;*/
+    /*opacity:1;*/
+    /*height: 100%;*/
+    /*width: 150px;*/
+    /*padding:10px;*/
+    /*border:1px solid black;*/
+    /*background:white;*/
+/*}*/
+
+
 
 .poster-container {
     color: white;
