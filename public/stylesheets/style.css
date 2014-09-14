@@ -8,7 +8,7 @@ body {
     font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: black;
     height: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
 
 }
 
@@ -189,6 +189,19 @@ body {
     background-repeat: no-repeat;
     margin: 0 auto;
 
+}
+
+#tab-container ul {
+    list-style-type: none;
+    -webkit-padding-start: 0px;
+    padding-start: 0px;
+}
+
+#tab-container ul li {
+    display:inline-block;
+    width:auto;
+    vertical-align:top;
+    overflow:hidden;
 }
 
 .trailer {
