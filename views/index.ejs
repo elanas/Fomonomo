@@ -3,6 +3,8 @@
 <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/tab-styles.css' />
+    <link rel='stylesheet' href='/stylesheets/tab-typography.css' />
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
@@ -50,7 +52,7 @@
         </div>
     <div class="page-container" ng-click="hideIframe()">
         <div class="movie-container">
-            <div ng-show="showPoster" class="poster animate-show">
+            <div ng-show="showPoster" class="poster animate-show" ng-init="showTabs = false">
                 <div class="poster-container"
                      ng-mouseenter="showPlayButton=true"
                      ng-mouseleave="showPlayButton=false">
@@ -58,27 +60,27 @@
                     <div class="movie-rating2"></div>
                     <img class="movie-rating-tomato" src="images/tomato.png"/>
                     <img class="poster-image" src="images/poster1.png"/>
-                    <div class="more-info"></div>
-                    <div ng-click="showPoster=false; showIframe()" class="play-button" ng-show="showPlayButton"></div>
-                    <div id="tab-container">
-                        <ul>
-                            <li><a href="#tab-1-div">Movie Info</a></li>
-                            <li><a href="#that-other-tab">The Second Tab</a></li>
-                            <li><a href="#lastly">Tab C</a></li>
+                    <div class="tabs tabs_default"  ng-class="{showTabs:showTabs}">
+                        <ul class="horizontal">
+                            <li ng-click="showTabs = !showTabs"><a href="#tab-1">Movie Info</a></li>
+                            <li><a href="#tab-2">tab</a></li>
+                            <li><a href="#tab-3">tab</a></li>
                         </ul>
-                        <div id="tab-1-div">
-                            <h2>Heading 1</h2>
-                            <p>This is the content of the first tab.</p>
+                        <div ng-show="showTabs" id="tab-1">
+                            <div class="synopsis">
+                                Filmed over 12 years with the same cast, Richard Linklater's BOYHOOD is a groundbreaking story of growing up as seen through the eyes of a child named Mason (a breakthrough performance by Ellar Coltrane), who literally grows up on screen before our eyes. Starring Ethan Hawke and Patricia Arquette as Mason's parents and newcomer Lorelei Linklater as his sister Samantha, BOYHOOD charts the rocky terrain of childhood like no other film has before. Snapshots of adolescence from road trips and family dinners to birthdays and graduations and all the moments in between become transcendent, set to a soundtrack spanning the years from Coldplay's Yellow to Arcade Fire's Deep Blue. BOYHOOD is both a nostalgic time capsule of the recent past and an ode to growing up and parenting. It's impossible to watch Mason and his family without thinking about our own journey. (c) Sundance Film Fest
+                            </div>
+                            <div class="generalInfo">
+                                R, 2 hr. 45 min.<br/>
+                                Drama<br/>
+                                Director: Richard Linklater<br/>
+                            </div>
                         </div>
-                        <div id="that-other-tab">
-                            <h2>Heading 2</h2>
-                            <p>Stuff from the second tab.</p>
-                        </div>
-                        <div id="lastly">
-                            <h2>Heading 3</h2>
-                            <p>More stuff from the last tab.</p>
-                        </div>
+                        <div ng-show="showTabs" id="tab-2">Tab 2</div>
+                        <div ng-show="showTabs" id="tab-3">Tab 3</div>
                     </div>
+                    <!--<div ng-click="showPoster=false; showIframe()" class="play-button" ng-class="{showPlayButton:showPlayButton}"></div>-->
+
                 </div>
                 <!--<div class="poster-img"></div>-->
             </div>
@@ -87,12 +89,11 @@
     </div>
 </div>
 <script type="text/javascript" src="bower_components/imagesloaded/imagesloaded.pkgd.js"></script>
-<script type="text/javascript" src="bower_components/easytabs/lib/jquery.easytabs.js"></script>
+<script type="text/javascript" src="bower_components/Tabslet/jquery.tabslet.js"></script>
 <script type="text/javascript" src="bower_components/jquery-fillcontainer/jquery.fillcontainer.js"></script>
-
 <script type="text/javascript">
     $(function() {
-        $('#tab-container').easytabs();
+        $('.tabs_default').tabslet();
         imagesLoaded('.poster-container', function() {
             $('.poster-container').fillContainer({
                 fillMode: 'fit',
