@@ -12,6 +12,7 @@ var test;
 
         $scope.showPoster = true;
         $scope.showPlayButton = false;
+        $scope.dim = true;
 
         $scope.posters = [
             {img: 'images/poster.png', score: "93", title: "Gamer"},
