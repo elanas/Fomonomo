@@ -6,49 +6,66 @@
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="http://www.youtube.com/iframe_api"></script>
+    <script src="http://www.youtube.com/player_api"></script>
     <script type="text/javascript" src="javascripts/webapp.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/movie-crawler.js"></script>
 
 </head>
 <body ng-controller="webController as ctrl">
-<div class="page-container">
-
-    <div ng-init='poster=true' class="movie-container">
-        <div ng-show="true" class="poster">
-            <!--<div class="title-container">-->
-            <!--<div class="movie-title">Gamer</div>-->
-            <!--<div class="movie-rating">-->
-            <!--<img src="images/tomato.png"/>-->
-            <!--<div>34%</div>-->
-            <!--</div>-->
-            <!--</div>-->
-    <div class="page-container">
-        <div ng-init='poster=true'class="movie-container">
-            <div ng-click="poster = false" ng-show="poster" class="poster animate-show">
-                <div class="poster-container">
+        <div ng-hide="!showPoster" ng-init="toggleNav = false" class="nav-container" ng-class="{showFullNav:toggleNav}">
+            <div class="hamburger-container">
+                <img ng-click="toggleNav = !toggleNav" src="images/hamburgerButton.png"/>
+                <div ng-hide="!toggleNav" class="company">
+                    Scene
+                </div>
+            </div>
+            <div ng-hide="!toggleNav" class="full-menu-container">
+                <div class="categories">
+                    <ul>
+                        <li>Favorites</li>
+                        <li>Genres
+                            <ul class="genre-list">
+                                <li>Action</li>
+                                <li>Adventure</li>
+                                <li>Classic</li>
+                                <li>Comedy</li>
+                                <li>Documentary</li>
+                                <li>Drama</li>
+                                <li>Horror</li>
+                                <li>Thriller</li>
+                                <li>Romance</li>
+                            </ul>
+                        </li>
+                        <li>Best of
+                            <ul>
+                                <li>All Time</li>
+                                <li>2013</li>
+                                <li>2012</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <div class="page-container" ng-click="hideIframe()">
+        <div class="movie-container">
+            <div ng-show="showPoster" class="poster animate-show">
+                <div class="poster-container"
+                     ng-mouseenter="showPlayButton=true"
+                     ng-mouseleave="showPlayButton=false">
                     <div class="movie-title title-container"></div>
                     <div class="movie-rating2"></div>
                     <img class="movie-rating-tomato" src="images/tomato.png"/>
                     <img class="poster-image" src="images/poster1.png"/>
+                    <div class="more-info"></div>
+                    <div ng-click="showPoster=false; showIframe()" class="play-button" ng-show="showPlayButton"></div>
                 </div>
                 <!--<div class="poster-img"></div>-->
             </div>
-            <div ng-click="poster = true" ng-show="!poster" class="trailer animate-show">
-
-                <!--<embed width="99%" height="99%"-->
-                       <!--src="http://www.youtube.com/v/Y0oX0xiwOv8">-->
-                <!--<iframe width="99%" height="100%"-->
-                        <!--src=" http://www.youtube.com/embed/Y0oX0xiwOv8?autohide=0&controls=0">-->
-                    <!--http://www.youtube.com/embed/VIDEO_ID-->
-                <!--</iframe>-->
-
-                <iframe width="99%" height="99%" src="http://www.youtube.com/embed/Y0oX0xiwOv8?
-                        rel=0&vq=hd1080&autohide=1&autoplay=1&border=1&color1=#096100&controls=0&hd=1&modestbranding=1"
-                        frameborder="0" allowfullscreen>
-                </iframe>
-
-        </div>
+            <div id="player" class="trailer animate-show">
+          </div>
     </div>
 </div>
 <script type="text/javascript" src="bower_components/imagesloaded/imagesloaded.pkgd.js"></script>
