@@ -140,9 +140,9 @@
                     <img class="poster-image" src="{{posters[index].img}}"/>
                     <div class="tabs tabs_default"  ng-class="{showTabs:showTabs}">
                         <ul class="horizontal">
-                            <li ng-click="showTabs = !showTabs"><a href="#tab-1">Movie Info</a></li>
-                            <li><a href="#tab-2">Watch</a></li>
-                            <li><a href="#tab-3">Recommendations (0)</a></li>
+                            <li  ng-click="showTabs = true"><a href="#tab-1">Movie Info</a></li>
+                            <li  ng-click="showTabs = true"><a href="#tab-2">Watch</a></li>
+                            <li  ng-click="showTabs = true"><a href="#tab-3">Recommendations (0)</a></li>
                             <li><a ng-click="showTabs = false"> X </a></li>
                         </ul>
                         <div ng-show="showTabs" id="tab-1">
@@ -177,7 +177,7 @@
                         </div>
                         <div ng-show="showTabs" id="tab-3">
                             <p>
-                                These are your Facebook friends. You have none.
+                                None of your friends recommend this movie.
                             </p>
                         </div>
                     </div>
@@ -194,9 +194,9 @@
                     <img class="poster-image" src="{{posters[index].img}}"/>
                     <div class="tabs tabs_default"  ng-class="{showTabs:showTabs}">
                         <ul class="horizontal">
-                            <li ng-click="showTabs = !showTabs"><a href="#tab-1">Movie Info</a></li>
-                            <li><a href="#tab-2">Watch</a></li>
-                            <li><a href="#tab-3">Recommendations (3)</a></li>
+                            <li  ng-click="showTabs = true"><a href="#tab-1">Movie Info</a></li>
+                            <li  ng-click="showTabs = true"><a href="#tab-2">Watch</a></li>
+                            <li  ng-click="showTabs = true"><a href="#tab-3">Recommendations (3)</a></li>
                             <li><a ng-click="showTabs = false"> X </a></li>
                         </ul>
                         <div ng-show="showTabs" id="tab-1">
