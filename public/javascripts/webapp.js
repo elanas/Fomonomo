@@ -9,6 +9,7 @@
     app.controller('webController', ['$window', '$scope', '$http', '$timeout', function ($window, $scope, $http, $timeout) {
 
         $scope.showPoster = true;
+        $scope.showPlayButton = false;
 
         var p;
         $(document).ready(function() {

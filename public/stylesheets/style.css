@@ -262,10 +262,13 @@ body {
 }
 
 .play-button {
+    height: 30%;
+    margin: auto 3% !important;
+    width: 45%;
+    background-image: url('../images/playTrailerButton.png');
     position: relative;
-    height: 5%;
-    width: 5%;
-    background-color: white;
-    top: 50%;
-    left: 20%;
+    top: -62%;
+    background-size: cover;
+    left: 25%;
+    cursor: pointer;
 }
