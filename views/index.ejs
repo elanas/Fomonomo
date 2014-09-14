@@ -30,7 +30,7 @@
             //console.log($(movies).first()[0].title);
             $("div.movie-title").text(movie.title);
             $("img.poster-image").attr("src", movie.posters.detailed.toString().substring(0, movie.posters.detailed.toString().length - 7) + "ori.jpg");
-            $("div.movie-rating2").text("%" + movie.ratings.critics_score);
+            $("div.movie-rating2").text(movie.ratings.critics_score + "%");
             console.log(movie.posters.original);
         }
     </script>
@@ -74,7 +74,7 @@
         </div>
     <div class="page-container" ng-click="hideIframe()">
         <div class="movie-container">
-            <div ng-click="showPoster = false; showIframe()" ng-show="showPoster" class="poster animate-show">
+            <div ng-click="showPoster=false; showIframe()" ng-show="showPoster" class="poster animate-show">
                 <div class="poster-container">
                     <div class="movie-title title-container"></div>
                     <div class="movie-rating2"></div>
