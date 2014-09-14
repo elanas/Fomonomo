@@ -26,6 +26,7 @@ var getAsArray = function() {
         cursor.forEach(function(obj) {
            arr.push(obj);
         })
+//        console.log(arr);
         return arr;
     });
 }
