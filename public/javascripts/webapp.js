@@ -150,11 +150,11 @@ var test;
         $(document).keydown(function(e) {
         console.log(e.keyCode);
             if(e.keyCode === 37) {
-                $scope.prevPoster();
+                $scope.nextPoster();
                 $scope.$apply();
             }
             if(e.keyCode === 39) {
-                $scope.nextPoster();
+                $scope.prevPoster();
                 $scope.$apply();
 
             }
