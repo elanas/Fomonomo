@@ -34,7 +34,7 @@ var test;
         }
 
         $scope.posters = [
-            makePosterObject(7), makePosterObject(1),makePosterObject(2)];
+            makePosterObject(0), makePosterObject(1),makePosterObject(2)];
 
 
 
@@ -45,9 +45,8 @@ var test;
 
         var count = 0;
         $scope.nextPoster = function() {
-            console.log("right fun");
             count ++;
-            $scope.posters[$scope.index] = makePosterObject($scope.index + count);
+            $scope.posters[$scope.index - 1] = makePosterObject($scope.index + count);
             $scope.index = ($scope.index + 1)% $scope.posters.length;
 
         }
