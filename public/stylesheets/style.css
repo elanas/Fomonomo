@@ -497,32 +497,34 @@ body {
     position: absolute;
 }
 
-.poster-container.ng-hide-add,
-.poster-container.ng-hide-remove {
-    -webkit-transition:all ease-in-out .75s;
-    -moz-transition:all ease-in-out .75s;
-    -o-transition:all ease-in-out .75s;
-    transition:all ease-in-out .75s;
+/*.poster-container.ng-hide-add,*/
+/*.poster-container.ng-hide-remove {*/
+    /*-webkit-transition:all ease-in-out .75s;*/
+    /*-moz-transition:all ease-in-out .75s;*/
+    /*-o-transition:all ease-in-out .75s;*/
+    /*transition:all ease-in-out .75s;*/
     /*display:block!important;*/
-}
+/*}*/
 
-.poster-container.ng-hide-remove {
+/*.poster-container.ng-hide-remove {*/
     /*opacity:0;*/
-    transform: translate(250%);
-}
+    /*transform: translate(250%);*/
+/*}*/
 
-.poster-container.ng-hide-remove.ng-hide-remove-active {
+/*.poster-container.ng-hide-remove.ng-hide-remove-active {*/
     /*opacity: 1;*/
-    transform: translate(0%);
-}
+    /*transform: translate(0%);*/
+/*}*/
 
-.poster-container.ng-hide-add {
-    transform: translate(0%);
-}
+/*.poster-container.ng-hide-add {*/
+    /*transform: translate(0%);*/
+/*}*/
 
-.poster-container.ng-hide-add.ng-hide-add-active {
-    transform: translate(-250%);
-}
+/*.poster-container.ng-hide-add.ng-hide-add-active {*/
+    /*transform: translate(-250%);*/
+    /*display: none;*/
+    /*opacity: 0;*/
+/*}*/
 
 
 .dimIcon {

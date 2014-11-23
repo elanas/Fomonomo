@@ -55,13 +55,13 @@
     <div class="page-container" ng-click="hideIframe()">
         <div class="movie-container">
             <div ng-show="showPoster" class="poster animate-show" ng-init="showTabs = false">
-                <div class="poster-container" ng-show="index == 0"
+                <div class="poster-container" ng-show="true"
                      ng-mouseenter="showPlayButton=true"
                      ng-mouseleave="showPlayButton=false">
-                    <div class="movie-title title-container">{{posters[0].title}}</div>
-                    <div class="movie-rating2">{{posters[0].score}}%</div>
+                    <div class="movie-title title-container">{{posters[index].title}}</div>
+                    <div class="movie-rating2">{{posters[index].score}}%</div>
                     <img class="movie-rating-tomato" src="images/tomato.png"/>
-                    <img class="poster-image" src="{{posters[0].img}}"/>
+                    <img class="poster-image" src="{{posters[index].img}}"/>
                     <div class="tabs tabs_default"  ng-class="{showTabs:showTabs}">
                         <ul class="horizontal">
                             <li ng-click="showTabs = true"><a href="#tab-1">Movie Info</a></li>
@@ -71,11 +71,11 @@
                         </ul>
                         <div ng-show="showTabs" id="tab-1">
                             <div class="synopsis">
-                                Reality and video games merge in this high-concept sci-fi action thriller from Crank creators Mark Neveldine and Brian Taylor. In the not too distant future, mind-control technology allows humans to control the actions and movements of other humans, allowing reclusive billionaire Ken Castle (Michael C. Hall) to create the ultimate video game. It's called "Slayers," and it's a mass-scale, multiplayer online first-person shooter that's as controversial as it is popular. In the world of gamers, Simon (Logan Lerman) is a rock star; miraculously managing to keep his character alive week after week, he racks up frags like Billy Mitchell jumps barrels. But unlike Mitchell's Mario, Simon's video-game avatar is a living, breathing human being named Kable (Gerard Butler). Defying the odds to keep Kable running and gunning though even the most explosive battles, Simon captures the imagination of a global audience. Torn from his family, thrown into prison, and forced to fight against his will, Kable realizes that his only hope of ever seeing his family again is to somehow escape the game, reclaim his identity, and expose Castle's dehumanizing technology on live television.
+                                {{posters[index].synopsis}}
                             </div>
                             <div class="generalInfo">
-                                R, 1 hr. 35 min.<br/>
-                                Action & Adventure<br/>
+                                {{posters[index].duration}} min.<br/>
+                                Drama<br/>
                                 Director: Mark Neveldine<br/>
                             </div>
                         </div>
@@ -136,109 +136,109 @@
                     <div ng-click="showPoster=false; showIframe()" class="play-button" ng-class="{showPlayButton:showPlayButton}"></div>
 
                 </div>
-                <div class="poster-container" ng-show="index == 1"
-                     ng-mouseenter="showPlayButton=true"
-                     ng-mouseleave="showPlayButton=false">
-                    <div class="movie-title title-container">{{posters[1].title}}</div>
-                    <div class="movie-rating2">{{posters[1].score}}%</div>
-                    <img class="movie-rating-tomato" src="images/tomato.png"/>
-                    <img class="poster-image" src="{{posters[1].img}}"/>
-                    <div class="tabs tabs_default"  ng-class="{showTabs:showTabs}">
-                        <ul class="horizontal">
-                            <li  ng-click="showTabs = true"><a href="#tab-1">Movie Info</a></li>
-                            <li  ng-click="showTabs = true"><a href="#tab-2">Watch Now</a></li>
-                            <li  ng-click="showTabs = true"><a href="#tab-3">Recommendations (0)</a></li>
-                            <li><a ng-click="showTabs = false"> X </a></li>
-                        </ul>
-                        <div ng-show="showTabs" id="tab-1">
-                            <div class="synopsis">
-                                Filmed over 12 years with the same cast, Richard Linklater's BOYHOOD is a groundbreaking story of growing up as seen through the eyes of a child named Mason (a breakthrough performance by Ellar Coltrane), who literally grows up on screen before our eyes. Starring Ethan Hawke and Patricia Arquette as Mason's parents and newcomer Lorelei Linklater as his sister Samantha, BOYHOOD charts the rocky terrain of childhood like no other film has before. Snapshots of adolescence from road trips and family dinners to birthdays and graduations and all the moments in between become transcendent, set to a soundtrack spanning the years from Coldplay's Yellow to Arcade Fire's Deep Blue. BOYHOOD is both a nostalgic time capsule of the recent past and an ode to growing up and parenting. It's impossible to watch Mason and his family without thinking about our own journey. (c) Sundance Film Fest
-                            </div>
-                            <div class="generalInfo">
-                                R, 2 hr. 45 min.<br/>
-                                Drama<br/>
-                                Director: Richard Linklater<br/>
-                            </div>
-                        </div>
-                        <div ng-show="showTabs" id="tab-2">
-                            <div class="watch-links">
-                                <div class="movie-links-left">
-                                    <a href="http://www.netflix.com">
-                                        <img class="watch-image-left" src="/images/netflix-logo.png">
-                                    </a>
-                                    <a href="http://www.itunes.com">
-                                        <img class="watch-image-left" src="/images/itunes-logo.jpg">
-                                    </a>
-                                </div>
-                                <div class="movie-links-right">
-                                    <a href="http://www.amazon.com">
-                                        <img class="watch-image-right" src="/images/amazoninstantvideo.png">
-                                    </a>
-                                    <a href="http://www.megavideo.com">
-                                        <img class="watch-image-right" src="/images/megavideo-logo.png">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div ng-show="showTabs" id="tab-3">
-                            <p>
-                                None of your friends recommend this movie.
-                            </p>
-                        </div>
-                    </div>
-                    <div ng-click="showPoster=false; showIframe()" class="play-button" ng-class="{showPlayButton:showPlayButton}"></div>
+                <!--<div class="poster-container" ng-show="index % 3 == 1"-->
+                     <!--ng-mouseenter="showPlayButton=true"-->
+                     <!--ng-mouseleave="showPlayButton=false">-->
+                    <!--<div class="movie-title title-container">{{posters[index].title}}</div>-->
+                    <!--<div class="movie-rating2">{{posters[index].score}}%</div>-->
+                    <!--<img class="movie-rating-tomato" src="images/tomato.png"/>-->
+                    <!--<img class="poster-image" src="{{posters[index].img}}"/>-->
+                    <!--<div class="tabs tabs_default"  ng-class="{showTabs:showTabs}">-->
+                        <!--<ul class="horizontal">-->
+                            <!--<li  ng-click="showTabs = true"><a href="#tab-1">Movie Info</a></li>-->
+                            <!--<li  ng-click="showTabs = true"><a href="#tab-2">Watch Now</a></li>-->
+                            <!--<li  ng-click="showTabs = true"><a href="#tab-3">Recommendations (0)</a></li>-->
+                            <!--<li><a ng-click="showTabs = false"> X </a></li>-->
+                        <!--</ul>-->
+                        <!--<div ng-show="showTabs" id="tab-1">-->
+                            <!--<div class="synopsis">-->
+                                <!--Filmed over 12 years with the same cast, Richard Linklater's BOYHOOD is a groundbreaking story of growing up as seen through the eyes of a child named Mason (a breakthrough performance by Ellar Coltrane), who literally grows up on screen before our eyes. Starring Ethan Hawke and Patricia Arquette as Mason's parents and newcomer Lorelei Linklater as his sister Samantha, BOYHOOD charts the rocky terrain of childhood like no other film has before. Snapshots of adolescence from road trips and family dinners to birthdays and graduations and all the moments in between become transcendent, set to a soundtrack spanning the years from Coldplay's Yellow to Arcade Fire's Deep Blue. BOYHOOD is both a nostalgic time capsule of the recent past and an ode to growing up and parenting. It's impossible to watch Mason and his family without thinking about our own journey. (c) Sundance Film Fest-->
+                            <!--</div>-->
+                            <!--<div class="generalInfo">-->
+                                <!--R, 2 hr. 45 min.<br/>-->
+                                <!--Drama<br/>-->
+                                <!--Director: Richard Linklater<br/>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div ng-show="showTabs" id="tab-2">-->
+                            <!--<div class="watch-links">-->
+                                <!--<div class="movie-links-left">-->
+                                    <!--<a href="http://www.netflix.com">-->
+                                        <!--<img class="watch-image-left" src="/images/netflix-logo.png">-->
+                                    <!--</a>-->
+                                    <!--<a href="http://www.itunes.com">-->
+                                        <!--<img class="watch-image-left" src="/images/itunes-logo.jpg">-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="movie-links-right">-->
+                                    <!--<a href="http://www.amazon.com">-->
+                                        <!--<img class="watch-image-right" src="/images/amazoninstantvideo.png">-->
+                                    <!--</a>-->
+                                    <!--<a href="http://www.megavideo.com">-->
+                                        <!--<img class="watch-image-right" src="/images/megavideo-logo.png">-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div ng-show="showTabs" id="tab-3">-->
+                            <!--<p>-->
+                                <!--None of your friends recommend this movie.-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div ng-click="showPoster=false; showIframe()" class="play-button" ng-class="{showPlayButton:showPlayButton}"></div>-->
 
-                </div>
+                <!--</div>-->
 
-                <div class="poster-container" ng-show="index == 2"
-                     ng-mouseenter="showPlayButton=true"
-                     ng-mouseleave="showPlayButton=false">
-                    <div class="movie-title title-container">{{posters[2].title}}</div>
-                    <div class="movie-rating2">{{posters[2].score}}%</div>
-                    <img class="movie-rating-tomato" src="images/tomato.png"/>
-                    <img class="poster-image" src="{{posters[2].img}}"/>
-                    <div class="tabs tabs_default"  ng-class="{showTabs:showTabs}">
-                        <ul class="horizontal">
-                            <li  ng-click="showTabs = true"><a href="#tab-1">Movie Info</a></li>
-                            <li  ng-click="showTabs = true"><a href="#tab-2">Watch Now</a></li>
-                            <li  ng-click="showTabs = true"><a href="#tab-3">Recommendations (3)</a></li>
-                            <li><a ng-click="showTabs = false"> X </a></li>
-                        </ul>
-                        <div ng-show="showTabs" id="tab-1">
-                            <div class="synopsis">
-                                Written and directed by Alec Berg, David Mandel, and Jeff Schaffer, Eurotrip is a teen comedy from the Montecito Picture Company (makers of similar movies Old School and Road Trip). Mainstream teenager Scott (Scott Mechlowicz) forms an online friendship with German student Mieke in order to get a passing grade in his high school German class. When he finds out Mieke is a buxom blonde girl (Jessica Böhrs), he travels to meet her with his pals Cooper (Jacob Pitts), Jenny (Michelle Trachtenberg), and Jamie (Travis Wester). The group of randy teens head to Berlin by way of London, Paris, and Amsterdam.
-                            </div>
-                            <div class="generalInfo">
-                                R, 1 hr. 29 min.<br/>
-                                Comedy<br/>
-                                Director: Jeff Schaffer<br/>
-                            </div>
-                        </div>
-                        <div ng-show="showTabs" id="tab-2">
-                            <div class="watch-links">
-                                <div class="movie-links-left">
-                                    <a href="http://www.netflix.com">
-                                        <img class="watch-image-left" src="/images/netflix-logo.png">
-                                    </a>
-                                    <a href="http://www.itunes.com">
-                                        <img class="watch-image-left" src="/images/itunes-logo.jpg">
-                                    </a>
-                                </div>
-                                <div class="movie-links-right">
-                                    <a href="http://www.amazon.com">
-                                        <img class="watch-image-right" src="/images/amazoninstantvideo.png">
-                                    </a>
-                                    <a href="http://www.megavideo.com">
-                                        <img class="watch-image-right" src="/images/megavideo-logo.png">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div ng-show="showTabs" id="tab-3">Tab 3</div>
-                    </div>
-                    <div ng-click="showPoster=false; showIframe()" class="play-button" ng-class="{showPlayButton:showPlayButton}"></div>
+                <!--<div class="poster-container" ng-show="index % 3 == 2"-->
+                     <!--ng-mouseenter="showPlayButton=true"-->
+                     <!--ng-mouseleave="showPlayButton=false">-->
+                    <!--<div class="movie-title title-container">{{posters[index].title}}</div>-->
+                    <!--<div class="movie-rating2">{{posters[index].score}}%</div>-->
+                    <!--<img class="movie-rating-tomato" src="images/tomato.png"/>-->
+                    <!--<img class="poster-image" src="{{posters[index].img}}"/>-->
+                    <!--<div class="tabs tabs_default"  ng-class="{showTabs:showTabs}">-->
+                        <!--<ul class="horizontal">-->
+                            <!--<li  ng-click="showTabs = true"><a href="#tab-1">Movie Info</a></li>-->
+                            <!--<li  ng-click="showTabs = true"><a href="#tab-2">Watch Now</a></li>-->
+                            <!--<li  ng-click="showTabs = true"><a href="#tab-3">Recommendations (3)</a></li>-->
+                            <!--<li><a ng-click="showTabs = false"> X </a></li>-->
+                        <!--</ul>-->
+                        <!--<div ng-show="showTabs" id="tab-1">-->
+                            <!--<div class="synopsis">-->
+                                <!--Written and directed by Alec Berg, David Mandel, and Jeff Schaffer, Eurotrip is a teen comedy from the Montecito Picture Company (makers of similar movies Old School and Road Trip). Mainstream teenager Scott (Scott Mechlowicz) forms an online friendship with German student Mieke in order to get a passing grade in his high school German class. When he finds out Mieke is a buxom blonde girl (Jessica Böhrs), he travels to meet her with his pals Cooper (Jacob Pitts), Jenny (Michelle Trachtenberg), and Jamie (Travis Wester). The group of randy teens head to Berlin by way of London, Paris, and Amsterdam.-->
+                            <!--</div>-->
+                            <!--<div class="generalInfo">-->
+                                <!--R, 1 hr. 29 min.<br/>-->
+                                <!--Comedy<br/>-->
+                                <!--Director: Jeff Schaffer<br/>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div ng-show="showTabs" id="tab-2">-->
+                            <!--<div class="watch-links">-->
+                                <!--<div class="movie-links-left">-->
+                                    <!--<a href="http://www.netflix.com">-->
+                                        <!--<img class="watch-image-left" src="/images/netflix-logo.png">-->
+                                    <!--</a>-->
+                                    <!--<a href="http://www.itunes.com">-->
+                                        <!--<img class="watch-image-left" src="/images/itunes-logo.jpg">-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="movie-links-right">-->
+                                    <!--<a href="http://www.amazon.com">-->
+                                        <!--<img class="watch-image-right" src="/images/amazoninstantvideo.png">-->
+                                    <!--</a>-->
+                                    <!--<a href="http://www.megavideo.com">-->
+                                        <!--<img class="watch-image-right" src="/images/megavideo-logo.png">-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div ng-show="showTabs" id="tab-3">Tab 3</div>-->
+                    <!--</div>-->
+                    <!--<div ng-click="showPoster=false; showIframe()" class="play-button" ng-class="{showPlayButton:showPlayButton}"></div>-->
 
-                </div>
+                <!--</div>-->
 
                 <div class="arrow left" ng-mouseenter="leftArrow=true" ng-mouseleave="leftArrow=false"
                      ng-click="nextPoster()" ng-class="{'greyArrow-left':!leftArrow}"></div>

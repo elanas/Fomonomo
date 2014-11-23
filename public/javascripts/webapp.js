@@ -21,8 +21,31 @@ var test;
 
         console.log(MOVIEARR);
 
+        function shuffle(array) {
+            var currentIndex = array.length, temporaryValue, randomIndex ;
+
+            // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
+
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+
+            return array;
+        }
+
+        var shuffledArr = shuffle(MOVIEARR);
+        console.log("shuffled");
+
         var imgStr = 'posters[original]';
         var rating = 'ratings[critics_score]';
+
 
         var getImgUrl = function(orig) {
             var str = orig.substring(0,orig.length-7) + 'ori.jpg';
@@ -30,18 +53,25 @@ var test;
         }
 
         var makePosterObject = function(i) {
-            return {img: getImgUrl(MOVIEARR[i].info[imgStr]), score: MOVIEARR[i].info[rating], title: MOVIEARR[i].info.title};
+            return {img: getImgUrl(MOVIEARR[i].info[imgStr]), score: MOVIEARR[i].info[rating], title: MOVIEARR[i].info.title, synopsis:  MOVIEARR[i].info.synopsis,
+                    duration: MOVIEARR[i].info.runtime};
         }
 
         $scope.posters = [
             makePosterObject(0), makePosterObject(1),makePosterObject(2)];
 
 
+//        $scope.posters = [
+//            makePosterObject(7), makePosterObject(1),makePosterObject(2)];
+        $scope.posters = [];
 
-//        console.log(JSON.stringify({img: MOVIEARR[0].info.posters['original'], score: MOVIEARR[0].info.ratings.critics_score, title: MOVIEARR[0].info.title}));
 
+        for (var x = 0; x < MOVIEARR.length; x++) {
+            $scope.posters.push(makePosterObject(x));
+        }
 
         $scope.index = 0;
+
 
         var count = 0;
         $scope.nextPoster = function() {
@@ -54,6 +84,7 @@ var test;
 //        this.test = $scope.nextPoster();
 
         $scope.prevPoster = function() {
+            console.log("hi");
             if($scope.index == 0) {
                 $scope.index = $scope.posters.length-1;
             } else {
@@ -122,11 +153,11 @@ var test;
         $(document).keydown(function(e) {
         console.log(e.keyCode);
             if(e.keyCode === 37) {
-                $scope.prevPoster();
+                $scope.nextPoster();
                 $scope.$apply();
             }
             if(e.keyCode === 39) {
-                $scope.nextPoster();
+                $scope.prevPoster();
                 $scope.$apply();
 
             }
